@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xjzbfs.mapper.CustomerConsignmentMapper">
+    <insert id="insertCustomerConsignment" parameterType="com.xjzbfs.pojo.CustomerConsignment">
+        INSERT INTO customer_consignment (co_id,co_cid,co_phone,co_name,co_department, co_count, co_date) VALUES (#{co_id},#{co_cid},#{co_phone},#{co_name},#{co_department},#{co_count},#{co_date})
+    </insert>
+    
+    <update id="updateCustomerConsignmentByCoId" parameterType="String">
+        update customer_consignment SET co_count=co_count+1 ,co_date=#{co_date} WHERE co_id=#{co_id}
+    </update>
+
+    <select id="searchCustomerConsignmentByCoId" parameterType="String" resultType="com.xjzbfs.pojo.CustomerConsignment">
+        SELECT * FROM customer_consignment WHERE co_id=#{co_id}
+    </select>
+
+    <select id="searchCustomerConsignmentByCoCid" resultType="com.xjzbfs.pojo.CustomerConsignment">
+        SELECT * FROM customer_consignment WHERE co_cid=#{co_cid}
+    </select>
+
+    <select id="getAllCustomerConsignment" resultType="com.xjzbfs.pojo.CustomerConsignment">
+        SELECT * FROM customer_consignment
+    </select>
+</mapper>

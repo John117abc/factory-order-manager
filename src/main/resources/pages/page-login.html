@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服装厂管理系统 - 用户登录</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/control/common.js"></script>
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <script src="./js/control/login.js"></script>
+</head>
+
+<body class="h-100">
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="text-center mb-3">
+                                </div>
+                                <h4 class="text-center mb-4 text-white">登录你的账号</h4>
+                                <form target="iframe" id="loginForm" >
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>用户名</strong></label>
+                                        <input type="text" class="form-control" name="u_name" maxlength="20"  required >
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>密码</strong></label>
+                                        <input type="password" name="u_password" class="form-control" required maxlength="20">
+                                    </div>
+                                    <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                        <div class="form-group">
+                                            <a class="text-white" href="/register">需要注册?</a>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button onclick="login()" id="loginBtn" class="btn bg-white text-primary btn-block">登录</button>
+                                    </div>
+                                </form>
+                                <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                                <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--**********************************
+    Scripts
+***********************************-->
+<!-- Required vendors -->
+<script src="./vendor/global/global.min.js"></script>
+<script src="./js/custom.min.js"></script>
+<script src="./js/deznav-init.js"></script>
+
+</body>
+
+</html>

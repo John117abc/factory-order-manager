@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xjzbfs.mapper.GoodsOrderMapper">
+    <insert id="insertGoodsOrders" parameterType="com.xjzbfs.pojo.GoodsOrder">
+        INSERT INTO goods_order (o_id, o_date, o_code, o_cid,o_ptype, o_otype, o_deadline, o_pay_type, o_print_count,o_review,o_count, o_price,o_deliver,o_isinvoice, o_muid,o_mname,o_mtime,o_address,o_wid,o_remarks)
+        VALUES (#{o_id},#{o_date},#{o_code},#{o_cid},#{o_ptype},#{o_otype},#{o_deadline},#{o_pay_type},#{o_print_count},#{o_review},#{o_count},#{o_price},#{o_deliver},#{o_isinvoice},#{o_muid},#{o_mname},#{o_mtime},#{o_address},#{o_wid},#{o_remarks})
+    </insert>
+
+    <update id="updateMakeTimeAndMaker" parameterType="com.xjzbfs.pojo.GoodsOrder">
+        UPDATE goods_order SET o_estimate=#{o_estimate},o_wid=#{o_wid},o_wname=#{o_wname},o_wtime=#{o_wtime},o_review=#{o_review}
+        WHERE o_id=#{o_id}
+    </update>
+
+    <select id="searchGoodsOrderById" parameterType="String" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_id=#{o_id}
+    </select>
+
+    <update id="finishProductOrder" >
+        UPDATE goods_order SET o_review=#{o_review}, o_wftime=#{o_wftime}
+        WHERE o_id=#{o_id}
+    </update>
+
+    <select id="getAllOrdersIsNullTime" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_review=#{o_review} AND o_estimate is null AND o_otype=#{o_otype}
+    </select>
+
+    <select id="getAllConfirmOrders" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_review=#{o_review}
+    </select>
+
+    <update id="updateSettlementOrderWithout" parameterType="com.xjzbfs.pojo.GoodsOrder">
+        UPDATE goods_order SET o_review=#{o_review},o_aeid=#{o_aeid},o_aename=#{o_aename},o_aetime=#{o_aetime}
+        WHERE o_id=#{o_id}
+    </update>
+
+    <update id="updateSettlementOrder" parameterType="com.xjzbfs.pojo.GoodsOrder">
+        UPDATE goods_order SET o_review=#{o_review},o_aeid=#{o_aeid},o_aename=#{o_aename},o_aetime=#{o_aetime},o_invoice=#{o_invoice}
+        WHERE o_id=#{o_id}
+    </update>
+
+    <select id="getAllOrdersByCustomerId" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_cid=#{o_cid} ORDER BY o_date DESC
+    </select>
+
+    <select id="getWillMakeGoodsOrdersByOWId" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_wid=#{o_wid} AND o_review=#{o_review}
+    </select>
+
+    <select id="getWillCheckGoodsOrdersByUId" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_muid=#{o_muid} AND o_review=#{o_review}
+    </select>
+
+    <update id="finishCheckOrder">
+        UPDATE goods_order SET o_auid=#{o_auid},o_auname=#{o_auname},o_autime=#{o_autime},o_review=#{o_review}
+        WHERE o_id=#{o_id}
+    </update>
+
+    <update id="updateOutOrderByOId" >
+        UPDATE goods_order SET o_oid=#{o_oid},o_oname=#{o_oname},o_otime=#{o_otime},o_courier=#{o_courier},o_review=#{o_review},o_deliver=#{o_deliver}
+        WHERE o_id=#{o_id}
+    </update>
+
+    <update id="updateOrderOPriceByOId">
+        UPDATE goods_order SET o_price=#{o_price} WHERE o_id=#{o_id}
+    </update>
+
+    <update id="updateSettlementOrderByOId">
+        UPDATE goods_order SET o_aetime=#{o_aetime},o_aeid=#{o_aeid},o_aename=#{o_aename},o_review=#{o_review} WHERE o_id=#{o_id}
+    </update>
+
+    <update id="updateInvoiceByOId">
+        UPDATE goods_order SET o_isinvoice=#{o_isinvoice} ,o_invoice=#{o_invoice} WHERE o_id=#{o_id}
+    </update>
+
+    <select id="getGoodOrderByOCode" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_code=#{o_code}
+    </select>
+
+    <select id="getGoodOrdersByTimes" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE o_cid=#{o_cid} AND (o_deadline BETWEEN #{start} AND #{end})
+    </select>
+
+    <select id="getGoodOrdersByThisMonth" resultType="com.xjzbfs.pojo.GoodsOrder">
+        SELECT * FROM goods_order WHERE (o_deadline BETWEEN #{start} AND #{end})
+    </select>
+
+    <delete id="deleteOrderByOId">
+        DELETE FROM goods_order WHERE o_id=#{o_id}
+    </delete>
+</mapper>

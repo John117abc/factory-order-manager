@@ -1,0 +1,47 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">搜索</h4>
+            </div>
+            <div class="card-body">
+                <div class="basic-form">
+                    <form target="iframe" id="searchOrderForm">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">订单编号/客户单位</label>
+                            <div class="col-sm-9">
+                                <input type="text" required maxlength="36" name="orderCodeOrCompany" class="form-control" placeholder="请输入订单编号或者客户单位..">
+                            </div>
+                        </div>
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <label class="col-form-label col-sm-3 pt-0">选择输入类型</label>
+                                <div class="col-sm-9">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="inputType" value="0" checked>
+                                        <label class="form-check-label">
+                                            订单编号
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="inputType" value="1">
+                                        <label class="form-check-label">
+                                            客户单位
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button onclick="searchOrder()" id="registerBtn" class="btn btn-primary">搜索</button>
+                            </div>
+                        </div>
+                    </form>
+                    <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                    <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xjzbfs.mapper.StockMapper">
+    <insert id="insertStock" parameterType="com.xjzbfs.pojo.Stock">
+        INSERT INTO stock (s_id, s_oid, s_gid, s_idate, s_status) VALUES (#{s_id},#{s_oid},#{s_gid},#{s_idate},#{s_status})
+    </insert>
+    <select id="getStockByOId" resultType="com.xjzbfs.pojo.Stock">
+        SELECT * FROM stock WHERE s_oid=#{s_oid}
+    </select>
+
+    <update id="updateOutStock">
+        UPDATE stock SET s_odate=#{s_odate} , s_status=#{s_status} WHERE s_oid=#{s_oid}
+    </update>
+
+    <select id="getAllStock" resultType="com.xjzbfs.pojo.Stock">
+        SELECT s_oid ,s_gid FROM stock ORDER BY s_idate DESC
+    </select>
+
+    <delete id="deleteStockBySOid">
+        DELETE FROM stock WHERE s_oid=#{s_oid}
+    </delete>
+</mapper>

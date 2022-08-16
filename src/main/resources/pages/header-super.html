@@ -1,0 +1,230 @@
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服装厂管理系统</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="stylesheet" href="./vendor/chartist/css/chartist.min.css">
+    <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="./vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="main-wrapper">
+    <div class="nav-header">
+        <a href="javascript:void(0)" class="brand-logo">
+            <img class="logo-abbr" src="./images/logo.png" alt="">
+        </a>
+
+        <div class="nav-control">
+            <div class="hamburger">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </div>
+        </div>
+    </div>
+    <!--**********************************
+        Nav header end
+    ***********************************-->
+
+    <!--**********************************
+    Header start
+***********************************-->
+    <div class="header">
+        <div class="header-content">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-between">
+                    <div class="header-left">
+                        <div class="dashboard_bar">
+                            服装厂管理系统
+                        </div>
+                    </div>
+<!--                    <ul class="navbar-nav header-right">-->
+<!--                        <li class="nav-item dropdown notification_dropdown">-->
+<!--                            <a class="nav-link  ai-icon" href="javascript:void(0)" role="button" data-toggle="dropdown">-->
+<!--                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8333 5.91732V3.49998C12.8333 2.85598 13.356 2.33331 14 2.33331C14.6428 2.33331 15.1667 2.85598 15.1667 3.49998V5.91732C16.9003 6.16698 18.5208 6.97198 19.7738 8.22498C21.3057 9.75681 22.1667 11.8346 22.1667 14V18.3913L23.1105 20.279C23.562 21.1831 23.5142 22.2565 22.9822 23.1163C22.4513 23.9761 21.5122 24.5 20.5018 24.5H15.1667C15.1667 25.144 14.6428 25.6666 14 25.6666C13.356 25.6666 12.8333 25.144 12.8333 24.5H7.49817C6.48667 24.5 5.54752 23.9761 5.01669 23.1163C4.48469 22.2565 4.43684 21.1831 4.88951 20.279L5.83333 18.3913V14C5.83333 11.8346 6.69319 9.75681 8.22502 8.22498C9.47919 6.97198 11.0985 6.16698 12.8333 5.91732ZM14 8.16664C12.4518 8.16664 10.969 8.78148 9.87469 9.87581C8.78035 10.969 8.16666 12.453 8.16666 14V18.6666C8.16666 18.8475 8.12351 19.026 8.04301 19.1881C8.04301 19.1881 7.52384 20.2265 6.9755 21.322C6.88567 21.5028 6.89501 21.7186 7.00117 21.8901C7.10734 22.0616 7.29517 22.1666 7.49817 22.1666H20.5018C20.7037 22.1666 20.8915 22.0616 20.9977 21.8901C21.1038 21.7186 21.1132 21.5028 21.0234 21.322C20.475 20.2265 19.9558 19.1881 19.9558 19.1881C19.8753 19.026 19.8333 18.8475 19.8333 18.6666V14C19.8333 12.453 19.2185 10.969 18.1242 9.87581C17.0298 8.78148 15.547 8.16664 14 8.16664Z" fill="#FE634E"/>-->
+<!--                                </svg>-->
+<!--                                <div class="pulse-css"></div>-->
+<!--                            </a>-->
+<!--                            <div class="dropdown-menu rounded dropdown-menu-right">-->
+<!--                                <div id="DZ_W_Notification1" class="widget-media dz-scroll p-3 height380">-->
+<!--                                    <ul class="timeline">-->
+<!--                                        <li>-->
+<!--                                            <div class="timeline-panel">-->
+<!--                                                <div class="media mr-2">-->
+<!--                                                    <img alt="image" width="50" src="images/avatar/1.jpg">-->
+<!--                                                </div>-->
+<!--                                                <div class="media-body">-->
+<!--                                                    <h6 class="mb-1">Dr sultads Send you Photo</h6>-->
+<!--                                                    <small class="d-block">29 July 2020 - 02:26 PM</small>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <div class="timeline-panel">-->
+<!--                                                <div class="media mr-2 media-info">-->
+<!--                                                    KG-->
+<!--                                                </div>-->
+<!--                                                <div class="media-body">-->
+<!--                                                    <h6 class="mb-1">Resport created successfully</h6>-->
+<!--                                                    <small class="d-block">29 July 2020 - 02:26 PM</small>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <div class="timeline-panel">-->
+<!--                                                <div class="media mr-2 media-success">-->
+<!--                                                    <i class="fa fa-home"></i>-->
+<!--                                                </div>-->
+<!--                                                <div class="media-body">-->
+<!--                                                    <h6 class="mb-1">Reminder : Treatment Time!</h6>-->
+<!--                                                    <small class="d-block">29 July 2020 - 02:26 PM</small>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <div class="timeline-panel">-->
+<!--                                                <div class="media mr-2">-->
+<!--                                                    <img alt="image" width="50" src="images/avatar/1.jpg">-->
+<!--                                                </div>-->
+<!--                                                <div class="media-body">-->
+<!--                                                    <h6 class="mb-1">Dr sultads Send you Photo</h6>-->
+<!--                                                    <small class="d-block">29 July 2020 - 02:26 PM</small>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <div class="timeline-panel">-->
+<!--                                                <div class="media mr-2 media-danger">-->
+<!--                                                    KG-->
+<!--                                                </div>-->
+<!--                                                <div class="media-body">-->
+<!--                                                    <h6 class="mb-1">Resport created successfully</h6>-->
+<!--                                                    <small class="d-block">29 July 2020 - 02:26 PM</small>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <div class="timeline-panel">-->
+<!--                                                <div class="media mr-2 media-primary">-->
+<!--                                                    <i class="fa fa-home"></i>-->
+<!--                                                </div>-->
+<!--                                                <div class="media-body">-->
+<!--                                                    <h6 class="mb-1">Reminder : Treatment Time!</h6>-->
+<!--                                                    <small class="d-block">29 July 2020 - 02:26 PM</small>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <a class="all-notification" href="javascript:void(0)">See all notifications <i class="ti-arrow-right"></i></a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item dropdown header-profile">-->
+<!--                            <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">-->
+<!--                                <img src="images/profile/17.jpg" width="20" alt=""/>-->
+<!--                                &lt;!&ndash; <div class="header-info">-->
+<!--                                    <span class="text-black"><strong>Brian Lee</strong></span>-->
+<!--                                    <p class="fs-12 mb-0">Admin</p>-->
+<!--                                </div> &ndash;&gt;-->
+<!--                            </a>-->
+<!--                            <div class="dropdown-menu dropdown-menu-right">-->
+<!--                                <a href="./app-profile.html" class="dropdown-item ai-icon">-->
+<!--                                    <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>-->
+<!--                                    <span class="ml-2">Profile </span>-->
+<!--                                </a>-->
+<!--                                <a href="./email-inbox.html" class="dropdown-item ai-icon">-->
+<!--                                    <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>-->
+<!--                                    <span class="ml-2">Inbox </span>-->
+<!--                                </a>-->
+<!--                                <a href="./page-login.html" class="dropdown-item ai-icon">-->
+<!--                                    <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>-->
+<!--                                    <span class="ml-2">Logout </span>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="deznav">
+        <div class="deznav-scroll">
+            <a  href="javascript:void(0)" onclick="goPage(this.name)" name="addOrder" class="add-menu-sidebar" >+ 新的订单</a>
+            <ul class="metismenu" id="menu">
+                <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+                    <i class="flaticon-381-networking"></i>
+                    <span class="nav-text">订单</span>
+                </a>
+                    <ul aria-expanded="false">
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="addOrder"  >添加新订单</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="searchAllOrder">查询订单</a></li>
+                        <li><a href="javascript:void(0)" onclick="goUserPages(this.name,this.id)" class="default-btn" name="checkOrder">订单整理</a></li>
+                        <li><a href="javascript:void(0)" onclick="goUserPages(this.name,this.id)" class="default-btn" name="outOrder">订单出库</a></li>
+                        <li><a href="javascript:void(0)" onclick="goUserPages(this.name,this.id)" class="default-btn" name="settlementOrder">订单结算</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                    <span class="nav-text">客户</span>
+                </a>
+                    <ul aria-expanded="false">
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="customerMes">客户信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="addCustomerBasicMes">添加客户基础信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="addCustomerAddressMes">添加客户地址信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="addCustomerConsignmentMes">添加客户托运部信息</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+                    <i class="flaticon-381-notepad"></i>
+                    <span class="nav-text">产品信息</span>
+                </a>
+                    <ul aria-expanded="false">
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="addClothesOrClothMes">添加服饰/辅料信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="addBuyMes">添加外购信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="getClothesOrClothMes">查看服饰/辅料信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="getBuyMes">查看外购信息</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="editGoods">编辑产品信息</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+                    <i class="flaticon-381-controls-3"></i>
+                    <span class="nav-text">库存</span>
+                </a>
+                    <ul aria-expanded="false">
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="stockClothes">服饰类订单库存</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="stockFabric">辅料类订单库存</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="stockBuy">外购类订单库存</a></li>
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="stockAll">全部库存</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+                    <i class="flaticon-381-internet"></i>
+                    <span class="nav-text">统计</span>
+                </a>
+                    <ul aria-expanded="false">
+                        <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false">客户财务统计</a>
+                            <ul aria-expanded="false">
+                                <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="customerCapital">结算与未结算统计</a></li>
+                                <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="customerCapitalInvoice">开票与未开票统计</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+                    <i class="flaticon-381-heart"></i>
+                    <span class="nav-text">账户管理</span>
+                </a>
+                    <ul aria-expanded="false">
+                        <li><a href="javascript:void(0)" onclick="goPage(this.name)" class="default-btn" name="adminMes">账号管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="copyright">
+                <p><strong>服装厂管理系统</strong> © 2021 All Rights Reserved</p>
+            </div>
+        </div>
+    </div>

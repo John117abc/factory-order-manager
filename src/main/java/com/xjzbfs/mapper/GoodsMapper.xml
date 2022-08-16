@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xjzbfs.mapper.GoodsMapper">
+    <insert id="insertGoods" parameterType="com.xjzbfs.pojo.Goods">
+        INSERT INTO goods (g_id,g_cid, g_name, g_production, g_size, g_csize, g_psize, g_specifications, g_unit,g_price, g_type, g_explain)
+        VALUES (#{g_id},#{g_cid},#{g_name},#{g_production},#{g_size},#{g_csize},#{g_psize},#{g_specifications},#{g_unit},#{g_price},#{g_type},#{g_explain})
+    </insert>
+
+    <select id="searchGoodByOId" parameterType="String" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_oid=#{g_oid}
+    </select>
+
+    <select id="searchGoodsByCId" parameterType="String" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_cid=#{g_cid}
+    </select>
+
+    <select id="searchGoodById" parameterType="String" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_id=#{g_id}
+    </select>
+
+    <select id="getAllGoods" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods
+    </select>
+
+    <select id="getAllClothesOrClothGoods" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_type=#{g_type1} OR g_type=#{g_type2}
+    </select>
+
+    <select id="getClothesOrClothGoodsByVCName" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_cid=#{g_cid} AND (g_type=#{g_type1} OR g_type=#{g_type2})
+    </select>
+
+    <select id="getAllBuyGoods" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_type=#{g_type}
+    </select>
+
+    <select id="getBuyGoodsByVGName" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_type=#{g_type} AND g_name LIKE  CONCAT('%',#{g_name,jdbcType=VARCHAR},'%')
+    </select>
+
+    <select id="getGoodsByVName" resultType="com.xjzbfs.pojo.Goods">
+        SELECT * FROM goods WHERE g_name LIKE CONCAT('%',#{g_name,jdbcType=VARCHAR},'%')
+    </select>
+
+    <update id="updateGoodsGPriceByGId">
+        UPDATE goods SET g_price=#{g_price} WHERE g_id=#{g_id}
+    </update>
+
+    <delete id="deleteGoodsByGId">
+        DELETE FROM goods WHERE g_id=#{g_id}
+    </delete>
+
+    <update id="updateGoodsByGid" >
+        UPDATE goods SET g_csize=#{g_csize},g_explain=#{g_explain},g_name=#{g_name},g_price=#{g_price},
+                         g_production=#{g_production},g_psize=#{g_psize},g_size=#{g_size},g_specifications=#{g_specifications},
+                         g_unit=#{g_unit} WHERE g_id=#{g_id}
+    </update>
+</mapper>

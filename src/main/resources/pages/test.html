@@ -1,0 +1,3143 @@
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">查询订单</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table header-border table-responsive-sm">
+                            <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>下单日期</th>
+                                <th>订单金额</th>
+                                <th>订单状态</th>
+                                <th>订单流程</th>
+                                <th>下单企业</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="javascript:void(0)">Order #26589</a>
+                                </td>
+                                <td>2021-02-02</td>
+                                <td><span class="text-muted">￥45.00</span>
+                                </td>
+                                <td><span class="badge badge-success">正常</span>
+                                <td><span class="badge badge-outline-secondary">制单中</span>
+                                </td>
+                                <td>海南热带海洋学院</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">搜索</h4>
+            </div>
+            <div class="card-body">
+                <div class="basic-form">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">订单编号/客户单位</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" placeholder="请输入订单编号或者客户单位..">
+                            </div>
+                        </div>
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <label class="col-form-label col-sm-3 pt-0">选择输入类型</label>
+                                <div class="col-sm-9">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="inputType" value="0" checked>
+                                        <label class="form-check-label">
+                                            订单编号
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="inputType" value="1">
+                                        <label class="form-check-label">
+                                            客户单位
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">搜索</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">选择客户</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-responsive-md" name="addOrderSecond">
+                            <thead>
+                            <tr>
+                                <th class="width80">序号</th>
+                                <th>单位/公司</th>
+                                <th>姓名</th>
+                                <th>联系电话</th>
+                                <th>地区</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr value="c_id" onclick="goPageAndTransport('c_id','searchCustomerOrderByCname',this.id)" id="" style="cursor:pointer">
+                                    <td><strong>1</strong></td>
+                                    <td>海南热带海洋学院</td>
+                                    <td>肥肥肥肥覅</td>
+                                    <td>15500903274</td>
+                                    <td>铁门关市</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+/**
+制单完成正在制作的订单
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">订单详情</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table border='0' cellpadding='0' cellspacing='0' width='2123' style='border-collapse:
+ collapse;table-layout:fixed;width:1592pt' class="table table-bordered table-responsive-sm">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                            <col width='72' span='11' style='width:54pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='4' height='18' class='x23' width='288' style='height:13.9pt;'>下单日期：</td>
+                                <td colspan='5' class='x23' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x23'>送货地址：</td>									<td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='3' height='18' class='x24' style='height:13.9pt;'>生产类别：</td>
+                                <td colspan='3' class='x23'>订单类别：</td>
+                                <td colspan='4' class='x23'>要求完成日期：</td>
+                                <td class='x21'></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='3' height='18' class='x23' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='2' class='x23'>打印次数：</td>
+                                <td colspan='3' class='x23'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td colspan='2' height='18' class='x22' style='height:13.9pt;'>名称</td>
+                                <td colspan='6' class='x22'>制作工艺</td>
+                                <td colspan='2' class='x22'>尺码</td>
+                                <td colspan='2' class='x22'>衣服尺码</td>
+                                <td colspan='2' class='x22'>裤子尺码</td>
+                                <td colspan='2' class='x22'>规格</td>
+                                <td colspan='2' class='x22'>数量</td>
+                                <td colspan='2' class='x22'>单位</td>
+                                <td colspan='2' class='x22'>单价</td>
+                                <td colspan='2' class='x22'>金额</td>
+                                <td colspan='2' class='x22'>发货状态</td>
+                                <td colspan='3' class='x22'>发票号</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='6' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='3' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                                <td colspan='3' height='18' class='x23' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='3' class='x23'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//正在审核的制作订单
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">订单详情</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                    <table border='0' cellpadding='0' cellspacing='0' width='2123' class="table table-bordered table-responsive-sm" id="big">
+                        <col width='72' span='12' style='width:54pt'>
+                        <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                        <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                        <col width='72' span='11' style='width:54pt'>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                            <td colspan='4' height='18' class='x22' width='288' style='height:13.9pt;'>下单日期：</td>
+                            <td colspan='5' class='x22' width='360'>订单编码：</td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='102' style='width:76.5pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                            <td colspan='4' height='18' class='x23' style='height:13.9pt;'>客户名称：</td>
+                            <td colspan='9' class='x22'>送货地址：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                            <td colspan='3' height='18' class='x23' style='height:13.9pt;'>生产类别：</td>
+                            <td colspan='3' class='x22'>订单类别：</td>
+                            <td colspan='4' class='x22'>要求完成日期：</td>
+                            <td class='x21'></td>
+                            <td class='x21'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                            <td colspan='3' height='18' class='x22' style='height:13.9pt;'>付款类型：</td>
+                            <td colspan='2' class='x22'>打印次数：</td>
+                            <td colspan='3' class='x22'>审核状态：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                            <td colspan='2' height='18' class='x24' style='height:13.9pt;'>名称</td>
+                            <td colspan='6' class='x24'>制作工艺</td>
+                            <td colspan='2' class='x24'>尺码</td>
+                            <td colspan='2' class='x24'>衣服尺码</td>
+                            <td colspan='2' class='x24'>裤子尺码</td>
+                            <td colspan='2' class='x24'>规格</td>
+                            <td colspan='2' class='x24'>数量</td>
+                            <td colspan='2' class='x24'>单位</td>
+                            <td colspan='2' class='x24'>单价</td>
+                            <td colspan='2' class='x24'>金额</td>
+                            <td colspan='2' class='x24'>发货状态</td>
+                            <td colspan='3' class='x24'>发票号</td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='6' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='3' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                            <td colspan='3' height='18' class='x22' style='height:13.9pt;'>制单人：</td>
+                            <td colspan='4' class='x22'>制单日期：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                            <td colspan='3' height='18' class='x25' style='height:13.9pt;'>敷料室：</td>
+                            <td colspan='4' class='x22'>接单日期：</td>
+                            <td colspan='4' class='x22'>预计完成时间：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <![if supportMisalignedColumns]>
+                        <tr height='0' style='display:none'>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='102' style='width:76.5pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                        </tr>
+                        <![endif]>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+//工厂未接订单页面
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">接单信息</h4>
+                    </div>
+                    <table border='0' cellpadding='0' cellspacing='0' width='2123'class="table table-bordered table-responsive-sm">
+                        <col width='72' span='12' style='width:54pt'>
+                        <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                        <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                        <col width='72' span='11' style='width:54pt'>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                            <td colspan='4' height='18' class='x23' width='288' style='height:13.9pt;'>下单日期：</td>
+                            <td colspan='5' class='x23' width='360'>订单编码：</td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='102' style='width:76.5pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                            <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                            <td colspan='9' class='x23'>送货地址：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                            <td colspan='3' height='18' class='x24' style='height:13.9pt;'>生产类别：</td>
+                            <td colspan='3' class='x23'>订单类别：</td>
+                            <td colspan='4' class='x23'>要求完成日期：</td>
+                            <td class='x21'></td>
+                            <td class='x21'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                            <td colspan='3' height='18' class='x23' style='height:13.9pt;'>付款类型：</td>
+                            <td colspan='2' class='x23'>打印次数：</td>
+                            <td colspan='3' class='x23'>审核状态：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                            <td colspan='2' height='18' class='x22' style='height:13.9pt;'>名称</td>
+                            <td colspan='6' class='x22'>制作工艺</td>
+                            <td colspan='2' class='x22'>尺码</td>
+                            <td colspan='2' class='x22'>衣服尺码</td>
+                            <td colspan='2' class='x22'>裤子尺码</td>
+                            <td colspan='2' class='x22'>规格</td>
+                            <td colspan='2' class='x22'>数量</td>
+                            <td colspan='2' class='x22'>单位</td>
+                            <td colspan='2' class='x22'>单价</td>
+                            <td colspan='2' class='x22'>金额</td>
+                            <td colspan='2' class='x22'>发货状态</td>
+                            <td colspan='3' class='x22'>发票号</td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='6' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='3' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                            <td colspan='3' height='18' class='x23' style='height:13.9pt;'>制单人：</td>
+                            <td colspan='3' class='x23'>制单日期：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <![if supportMisalignedColumns]>
+                        <tr height='0' style='display:none'>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='102' style='width:76.5pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                        </tr>
+                        <![endif]>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form class="form-valide" target="iframe" id="makeTimeAndName">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_estimate">预计完成时间 <span
+                                                    class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="datetime-local" class="form-control" id="o_estimate" name="o_estimate" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_wname">生产负责人
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_wname" required maxlength="10" name="o_wname" placeholder="张三">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button  onclick="updateOrderMakeTime()" id="submitBtn" class="btn btn-primary">提交</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                            <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//审查订单
+
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">审查信息</h4>
+                    </div>
+                    <table border='0' cellpadding='0' cellspacing='0' width='966' class="table table-bordered table-responsive-sm">
+                        <col width='72' span='12' style='width:54pt'>
+                        <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                            <td colspan='4' height='18' class='x22' width='288' style='height:13.9pt;'>下单日期：</td>
+                            <td colspan='5' class='x22' width='360'>订单编码：</td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='102' style='width:76.5pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                            <td colspan='4' height='18' class='x23' style='height:13.9pt;'>客户名称：</td>
+                            <td colspan='9' class='x22'>送货地址：</td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                            <td colspan='3' height='18' class='x23' style='height:13.9pt;'>生产类别：</td>
+                            <td colspan='3' class='x22'>订单类别：</td>
+                            <td colspan='4' class='x22'>要求完成日期：</td>
+                            <td class='x21'></td>
+                            <td class='x21'></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                            <td colspan='3' height='18' class='x22' style='height:13.9pt;'>付款类型：</td>
+                            <td colspan='2' class='x22'>打印次数：</td>
+                            <td colspan='3' class='x22'>审核状态：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                            <td colspan='2' height='18' class='x24' style='height:13.9pt;'>名称</td>
+                            <td colspan='2' class='x24'>规格</td>
+                            <td colspan='2' class='x24'>数量</td>
+                            <td colspan='2' class='x24'>单位</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                            <td colspan='3' height='18' class='x22' style='height:13.9pt;'>制单人：</td>
+                            <td colspan='4' class='x22'>制单日期：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                            <td colspan='3' height='18' class='x22' style='height:13.9pt;'>生产负责人：</td>
+                            <td colspan='4' class='x22'>接单日期：</td>
+                            <td colspan='4' class='x22'>完成日期：</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <![if supportMisalignedColumns]>
+                        <tr height='0' style='display:none'>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='102' style='width:76.5pt'></td>
+                        </tr>
+                        <![endif]>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form class="form-valide" target="iframe" id="checkName">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_auname">审查负责人
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_auname" required maxlength="10" name="o_auname" placeholder="张三">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button  onclick="updateOrderCheck()" id="submitBtn" class="btn btn-primary">提交</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                            <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//出库表
+
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">出库信息</h4>
+                    </div>
+                    <table border='0' cellpadding='0' cellspacing='0' width='966' class="table table-bordered table-responsive-sm">
+                        <col width='72' span='12' style='width:54pt'>
+                        <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                            <td colspan='5' height='18' class='x23' width='360' style='height:13.9pt;'>订单编码：</td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='102' style='width:76.5pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                            <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                            <td colspan='9' class='x23'>送货接收地：</td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                            <td colspan='2' height='18' class='x22' style='height:13.9pt;'>名称</td>
+                            <td colspan='2' class='x22'>规格</td>
+                            <td colspan='2' class='x22'>数量</td>
+                            <td colspan='2' class='x22'>单位</td>
+                            <td colspan='2' class='x22'>单价</td>
+                            <td colspan='2' class='x22'>金额</td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                            <td></td>
+                        </tr>
+                        <tr height='57' style='mso-height-source:userset;height:42.75pt;mso-xlrowspan:3' id='r6'>
+                            <td height='57' colspan='12' style='height:42.75pt;mso-ignore:colspan;'></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            <td height='18' style='height:13.9pt;'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class='x21'></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <![if supportMisalignedColumns]>
+                        <tr height='0' style='display:none'>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='102' style='width:76.5pt'></td>
+                        </tr>
+                        <![endif]>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form class="form-valide" target="iframe" id="outMessage">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_oname">出库制单人
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_oname" required maxlength="10" name="o_oname" placeholder="张三">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_courier">送货人
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_courier" required maxlength="10" name="o_courier" placeholder="李四">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="s_odate">送货日期
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="date" class="form-control" id="s_odate" required name="s_odate" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clo-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="g_price">单价(如果需要修改)
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="g_price" maxlength="10" name="g_price" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_price">金额(如果需要修改)
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_price" maxlength="11" name="o_price" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">提交</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                            <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//结算表
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">出库信息</h4>
+                    </div>
+                    <table border='0' cellpadding='0' cellspacing='0' width='1403' class="table table-bordered table-responsive-sm">
+                        <col width='72' span='12' style='width:54pt'>
+                        <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                        <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                        <col width='72' style='width:54pt'>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                            <td colspan='5' height='18' class='x25' width='360' style='height:13.9pt;'>订单编码：</td>
+                            <td colspan='5' class='x25' width='360'>订单编码：</td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                            <td width='102' style='width:76.5pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='73' style='width:54.75pt;'></td>
+                            <td width='72' style='width:54pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                            <td colspan='4' height='18' class='x26' style='height:13.9pt;'>客户名称：</td>
+                            <td colspan='9' class='x25'>送货接收地：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                            <td colspan='4' height='18' class='x26' style='height:13.9pt;'>生产类型：</td>
+                            <td colspan='4' class='x25'>订单类别：</td>
+                            <td colspan='5' class='x25'>要求完成日期：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                            <td colspan='4' height='18' class='x26' style='height:13.9pt;'>付款类型：</td>
+                            <td colspan='4' class='x25'>打印次数：</td>
+                            <td colspan='4' class='x25'>审核状态：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                            <td height='18' class='x23' style='height:13.9pt;'></td>
+                            <td class='x23'></td>
+                            <td class='x23'></td>
+                            <td class='x23'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                            <td height='18' class='x23' style='height:13.9pt;'></td>
+                            <td class='x23'></td>
+                            <td class='x23'></td>
+                            <td class='x23'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td class='x22'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            <td colspan='2' height='18' class='x24' style='height:13.9pt;'>名称</td>
+                            <td colspan='2' class='x24'>规格</td>
+                            <td colspan='2' class='x24'>数量</td>
+                            <td colspan='2' class='x24'>单位</td>
+                            <td colspan='2' class='x24'>单价</td>
+                            <td colspan='2' class='x24'>金额</td>
+                            <td colspan='2' class='x24'>发货状态</td>
+                            <td colspan='2' class='x24'>是否开具发票</td>
+                            <td colspan='3' class='x24'>发票号</td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            <td colspan='3' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r10'>
+                            <td colspan='3' height='18' class='x25' style='height:13.9pt;'>制单人：</td>
+                            <td colspan='4' class='x25'>制单日期：</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr height='38' style='mso-height-source:userset;height:28.5pt;mso-xlrowspan:2' id='r11'>
+                            <td height='38' colspan='12' style='height:28.5pt;mso-ignore:colspan;'></td>
+                            <td></td>
+                            <td colspan='5' style='mso-ignore:colspan;'></td>
+                            <td></td>
+                        </tr>
+                        <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r12'>
+                            <td height='18' style='height:13.9pt;'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class='x21'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <![if supportMisalignedColumns]>
+                        <tr height='0' style='display:none'>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                            <td width='102' style='width:76.5pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='73' style='width:54.75pt'></td>
+                            <td width='72' style='width:54pt'></td>
+                        </tr>
+                        <![endif]>
+                    </table>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form class="form-valide" target="iframe" id="outMessage">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_aename">结算人
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_aename" required maxlength="10" name="o_aename" placeholder="张三">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clo-xl-6">
+                                        <div class="form-group">
+                                            <label class="mb-1 text-black"><strong>是否开具发票</strong></label>
+                                            <span class="text-danger">*</span>
+                                            <label><input name="o_isinvoice" type="radio" checked="true" value="0" />是 </label>
+                                            <label><input name="o_isinvoice" type="radio" value="1" />否 </label>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="o_invoice">发票号(开发票必填)
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="o_invoice" maxlength="12" name="o_invoice" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">提交</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                            <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+//超级管理员查看制作订单表
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单制作信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='1403' class="table table-bordered table-responsive-sm" >
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                            <col width='72' style='width:54pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='5' height='18' class='x25' width='360' style='height:13.9pt;'>订单编码：</td>
+                                <td colspan='5' class='x25' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x26' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x25'>送货接收地：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='4' height='18' class='x26' style='height:13.9pt;'>生产类型：</td>
+                                <td colspan='4' class='x25'>订单类别：</td>
+                                <td colspan='5' class='x25'>要求完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='4' height='18' class='x26' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='4' class='x25'>打印次数：</td>
+                                <td colspan='4' class='x25'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td height='18' class='x23' style='height:13.9pt;'></td>
+                                <td class='x23'></td>
+                                <td class='x23'></td>
+                                <td class='x23'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td height='18' class='x23' style='height:13.9pt;'></td>
+                                <td class='x23'></td>
+                                <td class='x23'></td>
+                                <td class='x23'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td class='x22'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                                <td colspan='2' height='18' class='x24' style='height:13.9pt;'>名称</td>
+                                <td colspan='2' class='x24'>规格</td>
+                                <td colspan='2' class='x24'>数量</td>
+                                <td colspan='2' class='x24'>单位</td>
+                                <td colspan='2' class='x24'>单价</td>
+                                <td colspan='2' class='x24'>金额</td>
+                                <td colspan='2' class='x24'>发货状态</td>
+                                <td colspan='2' class='x24'>是否开具发票</td>
+                                <td colspan='3' class='x24'>发票号</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                                <td colspan='3' rowspan='3' height='55' class='x24' style='height:41.7pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r10'>
+                                <td colspan='3' height='18' class='x25' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='4' class='x25'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='38' style='mso-height-source:userset;height:28.5pt;mso-xlrowspan:2' id='r11'>
+                                <td height='38' colspan='12' style='height:28.5pt;mso-ignore:colspan;'></td>
+                                <td></td>
+                                <td colspan='5' style='mso-ignore:colspan;'></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r12'>
+                                <td height='18' style='height:13.9pt;'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+//超级管理员查看订单预制作表
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单制作信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='1475' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                            <col width='72' span='2' style='width:54pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='5' height='18' class='x22' width='360' style='height:13.9pt;'>下单日期：</td>
+                                <td colspan='5' class='x22' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>生产类型：</td>
+                                <td colspan='4' class='x22'>订单类别：</td>
+                                <td colspan='5' class='x22'>要求完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='4' class='x22'>打印次数：</td>
+                                <td colspan='4' class='x22'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td colspan='2' height='18' class='x23' style='height:13.9pt;'>名称</td>
+                                <td colspan='4' class='x23'>制作工艺</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                                <td colspan='2' class='x23'>单价</td>
+                                <td colspan='2' class='x23'>金额</td>
+                                <td colspan='2' class='x23'>发货状态</td>
+                                <td colspan='2' class='x23'>是否开具发票</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='4' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>生产车间：</td>
+                                <td colspan='4' class='x22'>生产负责人：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r10'>
+                                <td colspan='4' height='18' class='x22' style='height:13.9pt;'>生产日期：</td>
+                                <td colspan='4' class='x22'>生产完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r11'>
+                                <td colspan='4' height='18' class='x22' style='height:13.9pt;'>审核人：</td>
+                                <td colspan='4' class='x22'>审核时间：</td>
+                                <td></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+//超级管理员查看生产完成表
+
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单制作信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='1403' class="table table-bordered table-responsive-sm">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                            <col width='72' style='width:54pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='5' height='18' class='x23' width='360' style='height:13.9pt;'>订单编码：</td>
+                                <td colspan='5' class='x23' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x23'>送货接收地：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>生产类型：</td>
+                                <td colspan='4' class='x23'>订单类别：</td>
+                                <td colspan='5' class='x23'>要求完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='4' class='x23'>打印次数：</td>
+                                <td colspan='4' class='x23'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td colspan='2' height='18' class='x22' style='height:13.9pt;'>名称</td>
+                                <td colspan='2' class='x22'>规格</td>
+                                <td colspan='2' class='x22'>数量</td>
+                                <td colspan='2' class='x22'>单位</td>
+                                <td colspan='2' class='x22'>单价</td>
+                                <td colspan='2' class='x22'>金额</td>
+                                <td colspan='2' class='x22'>发货状态</td>
+                                <td colspan='2' class='x22'>是否开具发票</td>
+                                <td colspan='3' class='x22'>发票号</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                                <td colspan='3' rowspan='3' height='55' class='x22' style='height:41.7pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                                <td colspan='3' height='18' class='x23' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='4' class='x23'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                                <td colspan='3' height='18' class='x23' style='height:13.9pt;'>生产车间：</td>
+                                <td colspan='4' class='x23'>生产负责人：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r10'>
+                                <td colspan='4' height='18' class='x23' style='height:13.9pt;'>生产日期：</td>
+                                <td colspan='4' class='x23'>生产完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r11'>
+                                <td height='18' style='height:13.9pt;'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员审查订单表
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单制作信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='1475' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                            <col width='72' span='2' style='width:54pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='5' height='18' class='x22' width='360' style='height:13.9pt;'>下单日期：</td>
+                                <td colspan='5' class='x22' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>生产类型：</td>
+                                <td colspan='4' class='x22'>订单类别：</td>
+                                <td colspan='5' class='x22'>要求完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='4' class='x22'>打印次数：</td>
+                                <td colspan='4' class='x22'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td colspan='2' height='18' class='x23' style='height:13.9pt;'>名称</td>
+                                <td colspan='4' class='x23'>制作工艺</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                                <td colspan='2' class='x23'>单价</td>
+                                <td colspan='2' class='x23'>金额</td>
+                                <td colspan='2' class='x23'>发货状态</td>
+                                <td colspan='2' class='x23'>是否开具发票</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='4' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>生产车间：</td>
+                                <td colspan='4' class='x22'>生产负责人：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r10'>
+                                <td colspan='4' height='18' class='x22' style='height:13.9pt;'>生产日期：</td>
+                                <td colspan='4' class='x22'>生产完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r11'>
+                                <td colspan='4' height='18' class='x22' style='height:13.9pt;'>审核人：</td>
+                                <td colspan='4' class='x22'>审核时间：</td>
+                                <td></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员查看正在生产订单
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单制作信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='1331' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='5' style='mso-width-source:userset;width:54.75pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='5' height='18' class='x22' width='360' style='height:13.9pt;'>下单日期：</td>
+                                <td colspan='5' class='x22' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>生产类型：</td>
+                                <td colspan='4' class='x22'>订单类别：</td>
+                                <td colspan='5' class='x22'>要求完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='4' class='x22'>打印次数：</td>
+                                <td colspan='4' class='x22'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td colspan='2' height='18' class='x23' style='height:13.9pt;'>名称</td>
+                                <td colspan='4' class='x23'>制作工艺</td>
+                                <td colspan='2' class='x23'>尺码</td>
+                                <td colspan='2' class='x23'>衣服尺码</td>
+                                <td colspan='2' class='x23'>裤子尺码</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='4' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>生产厂：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td colspan='4' class='x22'>实际完成时间：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r10'>
+                                <td height='19' colspan='12' style='height:14.25pt;mso-ignore:colspan;'></td>
+                                <td></td>
+                                <td colspan='5' style='mso-ignore:colspan;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r11'>
+                                <td height='18' style='height:13.9pt;'></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员查看生产完成订单
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单制作信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='966' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r0'>
+                                <td colspan='5' height='18' class='x22' width='360' style='height:13.9pt;'>下单日期：</td>
+                                <td colspan='5' class='x22' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r1'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r2'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>生产类型：</td>
+                                <td colspan='4' class='x22'>订单类别：</td>
+                                <td colspan='5' class='x22'>要求完成日期：</td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r3'>
+                                <td colspan='4' height='18' class='x24' style='height:13.9pt;'>付款类型：</td>
+                                <td colspan='4' class='x22'>打印次数：</td>
+                                <td colspan='4' class='x22'>审核状态：</td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r4'>
+                                <td colspan='2' height='18' class='x23' style='height:13.9pt;'>名称</td>
+                                <td colspan='4' class='x23'>制作工艺</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='4' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td colspan='2' rowspan='3' height='55' class='x23' style='height:41.7pt;'></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r6'>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r7'>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r8'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='18' style='mso-height-source:userset;height:13.9pt' id='r9'>
+                                <td colspan='3' height='18' class='x22' style='height:13.9pt;'>生产厂：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td colspan='4' class='x22'>实际完成时间：</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员查看后整理完成制作订单
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单整理信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='966' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r0'>
+                                <td colspan='5' height='19' class='x22' width='360' style='height:14.25pt;'>下单日期：</td>
+                                <td colspan='5' class='x22' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r1'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r2'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>生产类型：</td>
+                                <td colspan='4' class='x22'>订单类别：</td>
+                                <td colspan='5' class='x22'>要求完成日期：</td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r3'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>付款类型：</td>
+                                <td colspan='4' class='x22'>打印次数：</td>
+                                <td colspan='4' class='x22'>审核状态：</td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r4'>
+                                <td colspan='2' height='19' class='x23' style='height:14.25pt;'>名称</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r6'>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r7'>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r8'>
+                                <td colspan='3' height='19' class='x22' style='height:14.25pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r9'>
+                                <td colspan='3' height='19' class='x22' style='height:14.25pt;'>后整理人员：</td>
+                                <td colspan='4' class='x22'>整理日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r10'>
+                                <td height='19' colspan='12' style='height:14.25pt;mso-ignore:colspan;'></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r11'>
+                                <td height='19' style='height:14.25pt;'></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员查看出库订单
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单出库信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='966' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r0'>
+                                <td colspan='5' height='19' class='x22' width='360' style='height:14.25pt;'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r1'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r2'>
+                                <td colspan='2' height='19' class='x23' style='height:14.25pt;'>名称</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r3'>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r4'>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r5'>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r6'>
+                                <td colspan='3' height='19' class='x22' style='height:14.25pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>送货日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r7'>
+                                <td colspan='3' height='19' class='x22' style='height:14.25pt;'>收货人：</td>
+                                <td colspan='4' class='x22'>送货人：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r8'>
+                                <td colspan='3' height='19' class='x22' style='height:14.25pt;'>送货单位：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r9'>
+                                <td height='19' style='height:14.25pt;'></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员订单结算页面
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">订单结算信息</h4>
+                    </div>
+                    <div style="overflow: scroll">
+                        <table border='0' cellpadding='0' cellspacing='0' width='1185' class="table table-bordered table-responsive-sm" id="big">
+                            <col width='72' span='12' style='width:54pt'>
+                            <col width='102' style='mso-width-source:userset;width:76.5pt'>
+                            <col width='73' span='3' style='mso-width-source:userset;width:54.75pt'>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r0'>
+                                <td colspan='5' height='19' class='x22' width='360' style='height:14.25pt;'>下单日期：</td>
+                                <td colspan='5' class='x22' width='360'>订单编码：</td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='72' style='width:54pt;'></td>
+                                <td width='102' style='width:76.5pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                                <td width='73' style='width:54.75pt;'></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r1'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>客户名称：</td>
+                                <td colspan='9' class='x22'>送货接收地：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r2'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>生产类型：</td>
+                                <td colspan='4' class='x22'>订单类别：</td>
+                                <td colspan='5' class='x22'>要求完成日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r3'>
+                                <td colspan='4' height='19' class='x24' style='height:14.25pt;'>付款类型：</td>
+                                <td colspan='4' class='x22'>打印次数：</td>
+                                <td colspan='4' class='x22'>审核状态：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r4'>
+                                <td colspan='2' height='19' class='x23' style='height:14.25pt;'>名称</td>
+                                <td colspan='2' class='x23'>规格</td>
+                                <td colspan='2' class='x23'>数量</td>
+                                <td colspan='2' class='x23'>单位</td>
+                                <td colspan='2' class='x23'>金额</td>
+                                <td colspan='2' class='x23'>发货状态</td>
+                                <td colspan='2' class='x23'>是否开具发票</td>
+                                <td colspan='2' class='x23'>发票号</td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r5'>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                                <td colspan='2' rowspan='3' height='57' class='x23' style='height:42.75pt;'></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r6'>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r7'>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r8'>
+                                <td colspan='3' height='19' class='x22' style='height:14.25pt;'>制单人：</td>
+                                <td colspan='4' class='x22'>制单日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r9'>
+                                <td colspan='6' height='19' class='x22' style='height:14.25pt;'>结算单创建日期：</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r10'>
+                                <td height='19' colspan='12' style='height:14.25pt;mso-ignore:colspan;'></td>
+                                <td></td>
+                                <td colspan='3' style='mso-ignore:colspan;'></td>
+                            </tr>
+                            <tr height='19' style='mso-height-source:userset;height:14.25pt' id='r11'>
+                                <td height='19' style='height:14.25pt;'></td>
+                                <td></td>
+                                <td class='x21'></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <![if supportMisalignedColumns]>
+                            <tr height='0' style='display:none'>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='72' style='width:54pt'></td>
+                                <td width='102' style='width:76.5pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                                <td width='73' style='width:54.75pt'></td>
+                            </tr>
+                            <![endif]>
+                        </table>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+                                <div class="clo-xl-6">
+                                </div>
+                                <div class="clo-xl-6">
+                                    <button  onclick="updateOrderOut()" id="submitBtn" class="btn btn-primary">撤销订单</button>
+                                </div>
+                            </div>
+                            <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//超级管理员订单统计
+
+
+<div class="form-group row">
+    <label class="col-lg-12 col-form-label" for="val-g_production">选择产品/数量
+        <span class="text-danger">*</span>
+    </label>
+    <div class="input-group col-xs-12">
+        <div class="input-group-btn">
+            <div class="col-lg-4">
+                <select class="selectpicker" name="o_gid" title="请选择" data-width="auto" data-live-search="true">
+                </select>
+            </div>
+        </div>
+        <input type="number" class="form-control" placeholder="请输入产品数量...">
+        <span class="input-group-btn">
+            <input type="button" class="btn btn-default" value="+" onclick="addGoods()">
+        </span>
+    </div>
+
+</div>
+
+
+<label class="col-lg-12 col-form-label" for="val-g_production">选择产品/数量
+    <span class="text-danger">*</span>
+</label>
+<div class="input-group col-xs-12">
+    <div class="input-group-btn">
+        <div class="col-lg-4">
+            <div class="dropdown bootstrap-select dropup" style="width: 195px;"><select class="selectpicker" name="o_gid" title="请选择" data-width="auto" data-live-search="true" tabindex="-98"><option class="bs-title-option" value=""></option>
+                <option value="2e2436e7-2134-4226-9f00-157a9eee8345">lsbl001</option>
+                <option value="485ce76e-21cf-4e16-96ac-b987e74dd954">zsbl</option>
+                <option value="845626c1-cb4d-4400-a197-91fe7cf66376">hsbl001</option>
+            </select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="button" title="请选择"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">请选择</div></div> </div></button><div class="dropdown-menu " role="combobox" style="min-width: 0px; max-height: 686px; overflow: hidden; min-height: 49px;"><div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off" role="textbox" aria-label="Search"></div><div class="inner show" role="listbox" aria-expanded="false" tabindex="-1" style="max-height: 621px; overflow-y: auto; min-height: 0px;"><ul class="dropdown-menu inner show"></ul></div></div></div>
+        </div>
+    </div>
+    <input type="number" class="form-control" placeholder="请输入产品数量...">
+        <span class="input-group-btn">
+    <input type="button" class="btn btn-default" value="+" onclick="addGoods('<option value=2e2436e7-2134-4226-9f00-157a9eee8345>lsbl001</option><option value=485ce76e-21cf-4e16-96ac-b987e74dd954>zsbl</option><option value=845626c1-cb4d-4400-a197-91fe7cf66376>hsbl001</option>')">
+</span>
+</div>
+
+<div class="form-group row">
+    <input style="visibility: hidden">
+</div>
+
+
+
+
+//编辑产品选择页面
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">产品列表</h4>
+                    <li class="nav-item">
+                        <div class="input-group search-area d-xl-inline-flex d-none">
+                            <input type="text" class="form-control" maxlength="50" name="addOrderFirstSearch" id="searchInput" placeholder="输入产品名称...">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><a href="javascript:void(0)" ><i class="flaticon-381-search-2"></i></a></span>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-responsive-md">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>产品货号</th>
+                                <th>产品名称</th>
+                                <th>产品所属公司</th>
+                                <th>产品类型</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+//产品编辑页面
+<div class="content-body">
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">编辑产品信息</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form class="form-valide">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_name">产品名称
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-g_name" required name="g_name" placeholder="请输入产品名称..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_size">产品尺码
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-g_size" name="g_size" placeholder="请输入产品尺码..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_csize">衣服尺码
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-g_csize" name="g_csize" placeholder="请输入衣服尺码..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_psize">裤子尺码
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-g_psize" name="g_psize" placeholder="请输入裤子尺码..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_production">制作工艺
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <textarea class="form-control" id="val-g_production" name="g_production" rows="5" required maxlength="256" placeholder="请输入制作工艺.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-c_company">所属客户
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" disabled="disabled" maxlength="50" class="form-control" id="val-c_company" name="g_specifications">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_type">产品类型
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" disabled="disabled" maxlength="20" class="form-control" id="val-g_type" name="g_type">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_price">单价
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="Number" class="form-control" required maxlength="10" id="val-g_price" name="g_price" placeholder="￥21.60">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_unit">单位
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" required maxlength="20" class="form-control" id="val-g_unit" name="g_unit" placeholder="请输入产品单位..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_specifications">产品规格
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" required maxlength="50" class="form-control" id="val-g_specifications" name="g_specifications" placeholder="请输入产品规格..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-g_explain">产品说明
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <textarea class="form-control" id="val-g_explain" name="g_explain" rows="7" maxlength="256" placeholder="请输入产品说明.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button type="submit" class="btn btn-primary">提交</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xjzbfs.mapper.MySessionMapper">
+    <insert id="insertSession" parameterType="com.xjzbfs.pojo.MySession">
+        INSERT INTO session (sessionId, user_id, create_time, user_type) VALUES (#{sessionId},#{user_id},#{create_time},#{user_type})
+    </insert>
+
+    <update id="updateSessionByUid" parameterType="com.xjzbfs.pojo.MySession">
+        UPDATE session SET sessionId=#{sessionId} ,create_time=#{create_time}
+        WHERE user_id=#{user_id}
+    </update>
+
+    <select id="searchSessionByUid" parameterType="String" resultType="com.xjzbfs.pojo.MySession">
+        SELECT * FROM session WHERE user_id=#{user_id}
+    </select>
+
+    <select id="searchSessionBySessionId" parameterType="String" resultType="com.xjzbfs.pojo.MySession">
+        SELECT * FROM session WHERE sessionId=#{sessionId}
+    </select>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xjzbfs.mapper.UserMapper">
+    <insert id="registerUser" parameterType="com.xjzbfs.pojo.User">
+        INSERT INTO user(u_id, u_name, u_phone,u_password, u_admin, u_tname,u_type) VALUES (#{u_id},#{u_name},#{u_phone},#{u_password},#{u_admin},#{u_tname},#{u_type})
+    </insert>
+
+    <select id="searchUserById" resultType="com.xjzbfs.pojo.User">
+        SELECT * FROM user WHERE u_id=#{u_id,jdbcType=VARCHAR}
+    </select>
+
+    <update id="updateUserPasswordById" >
+        UPDATE user SET u_password=#{u_password}
+            WHERE u_id=#{u_id}
+    </update>
+
+    <update id="updateUserDateById" >
+        UPDATE user SET u_date=#{u_date}
+            WHERE u_id=#{u_id}
+    </update>
+
+    <select id="searchUserByName" resultType="com.xjzbfs.pojo.User">
+        SELECT * FROM user WHERE u_name=#{u_name}
+    </select>
+
+    <select id="searchUserByPhone" resultType="com.xjzbfs.pojo.User">
+        SELECT * FROM user WHERE u_phone=#{u_phone}
+    </select>
+
+    <select id="getAllUsers" resultType="com.xjzbfs.pojo.User">
+        SELECT * FROM user
+    </select>
+</mapper>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服装厂管理系统 - 用户注册</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="./js/control/common.js"></script>
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <script src="./js/control/register.js"></script>
+</head>
+
+<body class="h-100">
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="text-center mb-3">
+                                    <a href="javascript:void(0)"><img src="" alt=""></a>
+                                </div>
+                                <h4 class="text-center mb-4 text-white">建立你的账户</h4>
+                                <form id="registerForm"  target="iframe">
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>用户名</strong></label>
+                                        <input type="text" class="form-control" name="u_name"  minlength="6" maxlength="16" required placeholder="只能包括 字母 , 下划线 , 数字长度必须在6 到 16 之间" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>真实姓名</strong></label>
+                                        <input type="text" name="u_tname" class="form-control" maxlength="12" required placeholder="只能输入最多12位且必须为汉字">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>手机号</strong></label>
+                                        <input type="tel" class="form-control" name="u_phone" minlength="11" maxlength="11"  required placeholder="中国大陆的11位手机号"  >
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>密码</strong></label>
+                                        <input type="password" name="u_password" class="form-control" minlength="6" maxlength="16" required placeholder="密码要大于6小于16位">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>校验码</strong></label>
+                                        <input type="password" name="checkCode" class="form-control" maxlength="64" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mb-1 text-white"><strong>账户类型</strong></label>
+                                        <label><input name="u_admin" type="radio" checked="true" value="0" />普通用户 </label>
+                                        <label><input name="u_admin" type="radio" value="1" />超级管理员 </label>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button onclick="register()" id="registerBtn" class="btn bg-white text-primary btn-block">注册</button>
+                                    </div>
+                                </form>
+                                <div class="new-account mt-3">
+                                    <p class="text-white">已经拥有一个账户? <a class="text-white" href="page-login.html">登录</a></p>
+                                </div>
+                                <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+                                <div id="reg_mes" class="col-xs-12 col-sm-12 col-pl-no text-error">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Required vendors -->
+<script src="./vendor/global/global.min.js"></script>
+<script src="./js/custom.min.js"></script>
+<script src="./js/deznav-init.js"></script>
+
+</body>
+</html>
